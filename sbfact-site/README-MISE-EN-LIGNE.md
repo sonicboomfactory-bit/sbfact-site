@@ -1,44 +1,32 @@
-# Mini-site SBFact — mise en ligne
+# Publication du mini-site Sonic Boom Factory
 
-Le site fonctionne sans installation ni compilation. Ouvrez index.html pour le consulter. Toutes les pages fonctionnent sans JavaScript. Les liens relatifs conviennent aussi à un dépôt GitHub Pages placé dans un sous-dossier.
+Archive complète du dépôt sonicboomfactory-bit/sbfact-site, préparée le 8 octobre 2026.
+Les pages et ressources existantes sont conservées, y compris la copie historique sbfact-site/.
+Les images originales jointes sont intégrées ; les anciens SVG restent disponibles.
+Les politiques corrigées de Cowork sont intégrées en français et en anglais, après retrait des affirmations non vérifiées sur le chargement des annonces au démarrage et les clés GameAnalytics.
 
-## Avant la mise en ligne
+## Mettre à jour GitHub Pages
 
-1. Le contact sonicboomfactory@gmail.com est intégré aux trois pages. Vérifiez que cette boîte reçoit les demandes.
-2. Le logo original n’était pas disponible dans la conversation récupérée. assets/logo-sbfact.svg est une signature typographique provisoire, pas une reproduction du logo choisi. Remplacez-la par votre logo ; si son format change, adaptez les trois balises img. L’illustration BrickArrow est décorative, pas une capture du jeu. Aucun détail de gameplay ni disponibilité Play Store n’a été inventé.
-3. Relisez les deux politiques avec la version Android réellement distribuée. Voir VERIFICATIONS-EDITEUR.md. La politique ne prouve pas que les SDK respectent les choix. Une fois les vérifications faites, retirez le bloc `<div class="notice">…</div>` des deux pages. Modifiez les deux langues ensemble et leur date de révision.
+1. Extraire le ZIP dans un dossier sur votre ordinateur. Le fichier index.html doit se trouver directement dans ce dossier, avec assets/, brickarrow/ et sbfact-site/.
+2. Ouvrir le dépôt existant https://github.com/sonicboomfactory-bit/sbfact-site et sélectionner la branche main.
+3. Cliquer sur Add file → Upload files. Déposer le CONTENU du dossier extrait, pas le ZIP ni un dossier englobant. Les dossiers assets/, brickarrow/ et sbfact-site/ doivent être déposés comme dossiers pour conserver les chemins. Les fichiers portant les mêmes chemins remplacent les versions précédentes. Vérifier les chemins avant de valider.
+4. Cliquer sur Commit changes lorsque vous souhaitez publier. Si GitHub Pages utilise main, cette validation déclenche la mise en ligne. Aucune publication n’a été effectuée par Codex.
+5. Dans Settings → Pages, vérifier la configuration existante. Pour une publication depuis la branche : Deploy from a branch, main, /(root). Ne pas changer une configuration différente déjà fonctionnelle sans l’examiner.
+6. Attendre la fin du déploiement dans Actions ou Pages, puis tester les trois URL ci-dessous en navigation privée, sur ordinateur et téléphone.
 
-## GitHub Pages : quelques clics
+## URL de confidentialité après publication
 
-1. Connectez-vous à GitHub, créez un dépôt public (par exemple `sbfact-site`).
-2. Dans ce dépôt, choisissez **Add file → Upload files**. Déposez le CONTENU de ce dossier, en conservant assets/ et brickarrow/. index.html doit être à la racine du dépôt. Vérifiez également la présence de .nojekyll. Validez avec **Commit changes**.
-3. Ouvrez **Settings → Pages**. Source : **Deploy from a branch**. Branche : **main**, dossier : **/(root)**. Cliquez **Save**.
-4. Attendez que GitHub affiche l’adresse du site. Ouvrez-la sur téléphone et ordinateur, sans être connecté à GitHub. Activez **Enforce HTTPS** si l’option est disponible.
-5. Ajoutez `brickarrow/privacy/` à la fin de l’adresse affichée : c’est l’URL française à utiliser dans AdMob et Google Play. L’anglais est à `brickarrow/privacy/en.html`. Exemple de structure uniquement : `https://VOTRE_COMPTE.github.io/NOM_DU_DEPOT/brickarrow/privacy/`. Ne copiez pas cet exemple tel quel.
+- Français : https://sonicboomfactory-bit.github.io/sbfact-site/brickarrow/privacy/
+- Alias français pour l’URL Play : https://sonicboomfactory-bit.github.io/sbfact-site/brickarrow/privacy/fr.html
+- Anglais : https://sonicboomfactory-bit.github.io/sbfact-site/brickarrow/privacy/en.html
 
-Pas de domaine à acheter. Aucun domaine fictif, lien Play Store fictif ou CNAME n’est inclus. Un domaine personnel pourra être configuré plus tard dans Settings → Pages.
+fr.html est une copie complète de la page française : aucun JavaScript ni redirection n’est nécessaire.
+Ne pas placer les nouveaux fichiers uniquement dans le sous-dossier historique sbfact-site/ : les pages publiques attendues sont à la racine du dépôt.
 
-## Autre hébergement statique
+## Dernière vérification Play et AdMob
 
-Envoyez le contenu du dossier dans la racine publique de votre hébergement. Il doit servir index.html dans les dossiers, conserver les sous-dossiers et proposer HTTPS sans connexion ni mot de passe. N’ajoutez pas de scripts de publicité ou de mesure d’audience à ces pages.
-
-## Retour dans AdMob et Google Play
-
-- Ouvrez l’URL publique de confidentialité en navigation privée : aucun accès connecté ne doit être nécessaire.
-- Renseignez cette URL dans la fiche BrickArrow d’AdMob et dans la politique de confidentialité Google Play. Ajoutez aussi le lien dans le jeu.
-- La rubrique Google Play « Sécurité des données » est une déclaration distincte : vérifiez ses réponses à partir des SDK et de la configuration réels. Ce site ne remplit pas cette rubrique.
-- Publiez le message UMP dans AdMob après vérification de la configuration et testez acceptation, refus et changement des choix sur téléphone.
-- app-ads.txt est un autre sujet : récupérez la ligne exacte fournie par AdMob si vous l’activez. Aucun identifiant éditeur inventé n’est fourni ici.
-
-## Fichiers
-
-- index.html : accueil, studio, BrickArrow, contact.
-- brickarrow/privacy/index.html : confidentialité française.
-- brickarrow/privacy/en.html : confidentialité anglaise.
-- assets/style.css : style responsive et impression.
-- assets/logo-sbfact.svg : signature typographique remplaçable.
-- assets/brickarrow-art.svg : composition graphique locale.
-- assets/favicon.svg : icône locale.
-- .nojekyll : site statique sans traitement Jekyll.
-
-Aucun JavaScript nécessaire, dépendance, formulaire, cookie, stockage local, police distante ou tracker ajouté. Les liens externes ne sont chargés qu’en cliquant. Les journaux et pratiques de l’hébergeur restent sous sa responsabilité.
+Après publication, vérifier que chaque URL affiche la nouvelle politique sans connexion, avec les images et les liens FR/EN.
+Utiliser l’URL française ou son alias dans la fiche Play et dans AdMob selon l’URL déjà renseignée, et maintenir un accès à la politique depuis le jeu.
+Vérifier que sonicboomfactory@gmail.com reçoit les demandes de confidentialité et de suppression.
+La publication du site ne valide pas la rubrique Sécurité des données : voir VERIFICATIONS-EDITEUR.md avant l’enregistrement définitif.
+Un fichier .nojekyll vide est inclus pour l’hébergement statique.
