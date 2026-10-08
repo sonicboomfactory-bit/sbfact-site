@@ -1,28 +1,30 @@
-# Vérifier la politique avec le jeu
+# Vérifications éditeur — BrickArrow
 
-Les données connues : jeu Android gratuit, AdMob/Mobile Ads, annonces Rewarded et éventuellement Interstitial, UMP et GameAnalytics. Le code, les versions des SDK et les tableaux de bord n’ont pas été audités.
+Préparation du 8 octobre 2026. Aucun AAB, APK, code du jeu ou tableau de bord AdMob n’a été inspecté.
 
-Avant de supprimer la mention de préparation des pages :
+## Informations utilisées
 
-- Vérifier que le nom d’éditeur est cohérent avec Google Play et que l’adresse email fonctionne. Si SBFact est uniquement une marque, identifier correctement l’éditeur/responsable légal selon votre situation ; aucune identité personnelle ou adresse n’a été inventée.
-- Confirmer les formats publicitaires effectivement activés et les éventuels SDK de médiation supplémentaires. S’il y en a, les ajouter à la politique et à la déclaration Play.
-- Relever les données et événements GameAnalytics réellement envoyés, les identifiants et permissions des SDK. Préciser le texte si la configuration diffère ou collecte d’autres données.
-- Tester le formulaire UMP, le refus et le retour aux options de confidentialité. Ajouter une entrée visible et utilisable dans le jeu lorsque requise. Mettre les deux politiques à jour avec le chemin exact du menu une fois connu.
-- Vérifier séparément GameAnalytics : information, choix analytique, blocage de la collecte avant consentement requis et arrêt après retrait. UMP seul ne garantit pas cela. Ne pas affirmer l’existence d’un bouton d’opt-out absent du jeu.
-- Confirmer les bases légales effectivement retenues, les contrats des fournisseurs, destinataires/transferts et les durées de conservation des données et éventuels exports détenus par SBFact. La politique signale honnêtement que les délais propres au jeu ne sont pas encore établis ; les préciser après cette vérification.
-- Confirmer la tranche d’âge déclarée dans Play et les réglages enfants/âge de consentement si applicables. Les fichiers ne supposent pas que le jeu vise ou exclut les enfants.
-- Vérifier toute fonctionnalité supplémentaire (compte, achat, cloud, support intégré). Aucune absence de ces fonctions n’est promise dans les pages.
-- Harmoniser politique, rubrique Sécurité des données, écrans de consentement et comportement de l’APK publié.
+- Votre contexte indique AdMob / Mobile Ads, UMP, des publicités interstitielles et récompensées et des sauvegardes locales.
+- GameAnalytics inactif dans la Release repose sur votre déclaration, pas sur une analyse binaire.
+- L’archive brickarrow-politiques-corrigees.zip fournit les textes FR/EN. Les affirmations sur le chargement au démarrage, la présence du SDK GameAnalytics et ses clés ont été retirées faute de vérification.
+- Aucun identifiant éditeur, lien Play Store, menu exact, délai de conservation ou tranche d’âge n’a été inventé.
 
-## Sources officielles consultées le 7 octobre 2026
+## Avant l’enregistrement définitif dans Play
 
-- https://developers.google.com/admob/android/privacy/play-data-disclosure
-- https://developers.google.com/admob/android/privacy
-- https://policies.google.com/privacy
-- https://www.gameanalytics.com/trust/privacy-faq
-- https://www.gameanalytics.com/trust/privacy-notice
-- https://www.gameanalytics.com/trust/eu-data-processing-addendum
-- https://docs.gameanalytics.com/event-tracking-and-integrations/data-retention-and-limits/data-retention-practices/
-- https://support.google.com/googleplay/android-developer/answer/10144311?hl=fr
+1. Relever les versions des SDK réellement distribués et les éventuels partenaires de médiation. La documentation Mobile Ads décrit une version et une configuration données ; elle ne prouve pas la configuration de votre Release.
+2. Vérifier GameAnalytics dans la Release et tous les autres flux du jeu.
+3. Tester UMP : actualisation des informations de consentement, formulaire requis, autorisation de demander des annonces, refus et modification des choix. Fournir une entrée d’options visible et utilisable lorsque requise.
+4. Confirmer les réponses Data Safety selon les traitements réels : position approximative via IP, interactions, diagnostics et identifiants sont documentés pour Mobile Ads standard. La catégorie « Autres données de performance » nécessite une correspondance justifiée avec les données du SDK utilisé ; ne pas la cocher ou décocher automatiquement.
+5. Ne pas déduire une collecte entièrement facultative du seul formulaire UMP ou du caractère volontaire des annonces récompensées.
+6. Le chiffrement TLS indiqué par Google concerne Mobile Ads. Vérifier tous les autres flux avant d’affirmer un chiffrement global.
+7. Tester la réception des demandes par email et la procédure réelle de suppression ; effacer les sauvegardes locales n’efface pas les données transmises à Google.
+8. Confirmer l’identité du responsable, les bases légales, les destinataires, les transferts, les durées de conservation et le public visé selon votre situation. Les textes proposés ne constituent pas une certification de conformité juridique.
+9. Harmoniser les réponses Play, les politiques FR/EN et le comportement du jeu. Conserver le formulaire en brouillon tant que les points nécessaires restent incertains.
 
-Ces pages sont des références de services, pas la preuve de la configuration de BrickArrow. Les versions « upcoming » GameAnalytics n’ont pas servi à affirmer des changements déjà effectifs. La livraison prépare les fichiers ; elle ne publie pas le jeu ni le site.
+## Références officielles consultées
+
+- Google Mobile Ads : https://developers.google.com/admob/android/privacy/play-data-disclosure
+- Google UMP : https://developers.google.com/admob/android/privacy
+- Google Play Data Safety : https://support.google.com/googleplay/android-developer/answer/10787469?hl=en
+
+Le site statique n’ajoute aucun tracker, script publicitaire, formulaire, cookie ou stockage local. L’hébergeur conserve ses propres pratiques techniques.
